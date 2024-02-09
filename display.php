@@ -32,7 +32,7 @@ $result = $mysqli->query($sql);
                                 <p class="card-text">Anno di pubblicazione: <?php echo $row['anno_di_pubblicazione']; ?></p>
                                 <p class="card-text">Genere: <?php echo $row['genere']; ?></p>
                                 <a href="edit.php?id=<?php echo $row['id']; ?>"><i class="fas fa-pencil-alt"></i></a>
-                                <a href="delete.php?id=<?php echo $row['id']; ?>"><i class="fas fa-trash-alt text-danger"></i></a>
+                                <a href="delete.php?id=<?php echo $row['id'];  ?>" onclick="return confirmarEliminar();"><i class="fas fa-trash-alt text-danger"></i></a>
 
                             </div>
                         </div>
@@ -44,3 +44,8 @@ $result = $mysqli->query($sql);
         </div>
     </div>
 </div>
+<script>
+    function confirmarEliminar() {
+        return confirm('Sei sicuro di eliminare questo libro?');
+    }
+</script>
