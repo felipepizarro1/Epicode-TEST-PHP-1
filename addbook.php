@@ -5,7 +5,7 @@
 
     <div class="container my-3">
         <h1 class="text-center">Aggiungi un libro</h1>
-        <form method="post" action="controller.php" enctype="multipart/form-data" class="my-3">
+        <form method="post" action="addcontroller.php" enctype="multipart/form-data" class="my-3">
             <div class="mb-3">
                 <label for="titolo" class="form-label">Titolo</label>
                 <input type="text" class="form-control" id="titolo" placeholder="Titolo..." name="titolo">
